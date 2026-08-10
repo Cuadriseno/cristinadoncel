@@ -366,7 +366,7 @@ proceeding. Check boxes are updated as we go.
 - [x] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK ✅ Done — installed `@radix-ui/react-navigation-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-accordion`, `@radix-ui/react-tooltip`, `framer-motion`, `zod`, `resend`, `@hcaptcha/react-hcaptcha`, `@mailerlite/mailerlite-nodejs`.
 - [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
 - [x] **0.6** Create `.env.local.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.local.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
-- [ ] **0.7** Set up GitHub Actions CI workflow (lint + typecheck)
+- [x] **0.7** Set up GitHub Actions CI workflow (lint + typecheck) ✅ Done — added `.github/workflows/ci.yml` (runs on push/PR to `main`, Node 20, `npm ci`, `npm run lint`, `npm run typecheck`). Added `typecheck` script (`tsc --noEmit`) to `package.json`. Both verified passing locally.
 - [ ] **0.8** Connect repo to Vercel, confirm first automatic deploy
 - [ ] **0.9 [DECISION]** Configure Tailwind with brand colors and fonts — *needs brand guide*
 
