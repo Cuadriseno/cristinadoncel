@@ -365,7 +365,7 @@ proceeding. Check boxes are updated as we go.
 - [x] **0.3** Install and configure Tailwind CSS ✅ Done — installed automatically as **Tailwind v4** (not v3 as originally planned) via `create-next-app`. Config model changed: no `tailwind.config.ts`; brand tokens will be added as CSS variables inside the `@theme { ... }` block in `src/app/globals.css` (see Step 0.9).
 - [x] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK ✅ Done — installed `@radix-ui/react-navigation-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-accordion`, `@radix-ui/react-tooltip`, `framer-motion`, `zod`, `resend`, `@hcaptcha/react-hcaptcha`, `@mailerlite/mailerlite-nodejs`.
 - [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
-- [ ] **0.6** Create `.env.local.example`
+- [x] **0.6** Create `.env.local.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.local.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
 - [ ] **0.7** Set up GitHub Actions CI workflow (lint + typecheck)
 - [ ] **0.8** Connect repo to Vercel, confirm first automatic deploy
 - [ ] **0.9 [DECISION]** Configure Tailwind with brand colors and fonts — *needs brand guide*
