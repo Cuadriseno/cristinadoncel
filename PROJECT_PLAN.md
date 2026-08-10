@@ -59,7 +59,7 @@ The repository is public. The following rules are enforced throughout the projec
 | Native metadata API for SEO | |
 | Deploys perfectly on Vercel | |
 
-**Decision: ✅ Next.js 14 App Router + TypeScript strict mode.**
+**Decision: ✅ Next.js App Router + TypeScript strict mode.** *(Note: scaffolded with Next.js 16.3.0 / React 19.2.8 — newer than the originally planned Next.js 14, since `create-next-app@latest` installs current stable. No issues identified; revisit if API differences surface.)*
 
 ---
 
@@ -74,6 +74,10 @@ The repository is public. The following rules are enforced throughout the projec
 
 **Decision: ✅ Tailwind CSS.** Brand colors and typography configured in `tailwind.config.ts`
 once the brand guide is provided.
+
+*Update: scaffolded as **Tailwind v4** (CSS-first config) instead of v3. There is no
+`tailwind.config.ts` by default — brand tokens will instead be added as CSS custom properties
+inside the `@theme { ... }` block in `src/app/globals.css` when the brand guide arrives (Step 0.9).*
 
 ---
 
@@ -356,11 +360,11 @@ proceeding. Check boxes are updated as we go.
 ---
 
 ### Phase 0 — Foundations
-- [ ] **0.1** Create GitHub repository ✅ Done
-- [ ] **0.2** Initialize Next.js 14 project with TypeScript (`create-next-app`)
-- [ ] **0.3** Install and configure Tailwind CSS
-- [ ] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK
-- [ ] **0.5** Configure ESLint + Prettier
+- [x] **0.1** Create GitHub repository ✅ Done
+- [x] **0.2** Initialize Next.js project with TypeScript (`create-next-app`) ✅ Done — installed Next.js 16.3.0 / React 19.2.8 (newer than originally planned Next.js 14; `create-next-app@latest` pulled current stable). No functional blocker identified so far — revisit if App Router/library APIs diverge from plan assumptions.
+- [x] **0.3** Install and configure Tailwind CSS ✅ Done — installed automatically as **Tailwind v4** (not v3 as originally planned) via `create-next-app`. Config model changed: no `tailwind.config.ts`; brand tokens will be added as CSS variables inside the `@theme { ... }` block in `src/app/globals.css` (see Step 0.9).
+- [x] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK ✅ Done — installed `@radix-ui/react-navigation-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-accordion`, `@radix-ui/react-tooltip`, `framer-motion`, `zod`, `resend`, `@hcaptcha/react-hcaptcha`, `@mailerlite/mailerlite-nodejs`.
+- [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
 - [ ] **0.6** Create `.env.local.example`
 - [ ] **0.7** Set up GitHub Actions CI workflow (lint + typecheck)
 - [ ] **0.8** Connect repo to Vercel, confirm first automatic deploy
