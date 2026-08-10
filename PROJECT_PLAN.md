@@ -367,7 +367,7 @@ proceeding. Check boxes are updated as we go.
 - [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
 - [x] **0.6** Create `.env.local.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.local.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
 - [x] **0.7** Set up GitHub Actions CI workflow (lint + typecheck) ✅ Done — added `.github/workflows/ci.yml` (runs on push/PR to `main`, Node 20, `npm ci`, `npm run lint`, `npm run typecheck`). Added `typecheck` script (`tsc --noEmit`) to `package.json`. Both verified passing locally.
-- [ ] **0.8** Connect repo to Vercel, confirm first automatic deploy
+- [x] **0.8** Connect repo to Vercel, confirm first automatic deploy ✅ Done — repo connected via Vercel's GitHub integration, first deploy successful. Live preview: https://cristinadoncel.vercel.app/
 - [ ] **0.9 [DECISION]** Configure Tailwind with brand colors and fonts — *needs brand guide*
 
 ### Phase 1 — Content & Assets

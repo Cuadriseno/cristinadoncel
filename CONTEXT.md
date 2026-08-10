@@ -33,7 +33,7 @@ Deployed on Vercel. Repo on GitHub (private).
 - Full site in Spanish — no i18n planned
 
 ## What the client provides
-- Brand guide (colors, fonts, logo) — needed before Phase 0.8 (Tailwind config)
+- Brand guide (colors, fonts, logo) — needed before Phase 0.9 (Tailwind config)
 - Portfolio images (high quality)
 - All page texts (services, about, etc.)
 - Legal texts (from WP export)
@@ -42,7 +42,8 @@ Deployed on Vercel. Repo on GitHub (private).
 ## Current status
 - GitHub repo created (private)
 - PROJECT_PLAN.md committed to repo root
-- Next step: Phase 0 — bootstrap Next.js project
+- Phase 0 steps 0.1–0.8 complete: Next.js 16 + TypeScript + Tailwind v4 scaffolded, dependencies installed, ESLint+Prettier configured, .env.local.example added, GitHub Actions CI passing, Vercel deploy live
+- Next step: Phase 0, Step 0.9 — Tailwind brand colors/fonts (needs brand guide from client)
 
 ## How to resume with Copilot
 Paste this file content as your first message in a new session,
@@ -56,7 +57,7 @@ Reference PROJECT_PLAN.md for the full execution checklist.
 - Vercel auto-provisions free SSL certificate
 
 ## Useful links
-- Repo: https://github.com/YOUR_USERNAME/cristinadoncel-web
-- Vercel project: (add link once connected)
+- Repo: https://github.com/Cuadriseno/cristinadoncel
+- Vercel project: https://cristinadoncel.vercel.app/
 - Resend dashboard: https://resend.com
 - hCaptcha dashboard: https://dashboard.hcaptcha.com
