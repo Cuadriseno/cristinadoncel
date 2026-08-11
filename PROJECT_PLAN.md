@@ -374,7 +374,7 @@ proceeding. Check boxes are updated as we go.
 - [x] **1.1** Add all images to `/public/images/` ✅ Done — working/low-res images placed in `portfolio/`, `clients/`, `brand/`. High-res finals and branding assets (SVG logo etc.) to be swapped in when available. See `docs/BRANDING.md` for open items.
 - [x] **1.2** Create `/src/content/` data files ✅ Done — created `clients.ts`, `portfolio.ts`, `services.ts` and `pages/home.ts`, `pages/marcas-y-agencias.ts`, `pages/bodas-y-eventos.ts`, `pages/branding.ts`, `pages/sobre-mi.ts` with full Spanish copy and image mappings. Branding/sobre-mi images are placeholders pending final assets.
 - [x] **1.3** Add legal texts to `/src/content/legal/` as Markdown files ✅ Done — created `aviso-legal.md`, `privacidad.md`, `cookies.md`, `terminos.md`, `devoluciones.md` with full content extracted from live site.
-- [ ] **1.4** Review legal texts for completeness
+- [x] **1.4** Review legal texts for completeness ✅ Done — all 5 files reviewed. Two items flagged for Cristina to resolve before go-live: (1) `privacidad.md` last-updated date is stale (2020) — needs updating to reflect new hosting/analytics; (2) `terminos.md` and `cookies.md` contain e-commerce/WooCommerce sections (shipping, Redsys/Bizum payments) that are not applicable to the new site — Cristina to decide whether to strip or retain before Phase 8.
 
 ### Phase 2 — Layout & Shared Components
 - [ ] **2.1** Build `Navbar` (responsive, dropdown nav, mobile hamburger menu)
@@ -469,6 +469,25 @@ At go-live time (Phase 8):
 - **CMS migration:** Content files are structured for easy migration to Sanity if Cristina ever wants to self-edit.
 - **Portfolio gallery:** Add a filterable gallery page as a client component when needed.
 - **MailerLite list growth:** Free up to 1,000 subscribers. Upgrade plan if list grows.
+
+---
+
+## 11. Pre-Go-Live Checklist (before Phase 8)
+
+Items that must be resolved before cutting the domain over to the new site.
+
+### Legal texts
+- [ ] **`privacidad.md`** — Update the *"Última actualización"* date (currently shows 15 de mayo de 2020). Also review the third-party recipients list: WordPress and Don Dominio hosting are no longer used — replace with Vercel (hosting) and update analytics reference if Google Analytics is replaced by Vercel Analytics.
+- [ ] **`terminos.md`** — Contains WooCommerce e-commerce sections (shipping costs, Redsys/Bizum payment methods, order process, product warranties). The new site has no shop. Decide with Cristina: **strip these sections** (recommended for a clean services-only site) or **retain** if the Etsy shop or future product sales make them relevant.
+- [ ] **`cookies.md`** — References advertising/social cookies inherited from the WP/WooCommerce setup. Review and remove any cookie types not actually used by the new site (e.g. advertising cookies if no ad network is active).
+
+### Brand assets
+- [ ] Replace low-res placeholder images with final high-res versions (see `docs/BRANDING.md` open items).
+- [ ] Confirm final SVG/vector logo files are in `/public/images/brand/` before launch.
+
+### Other
+- [ ] Update `privacidad.md` hosting/platform reference from WordPress/Don Dominio → Vercel.
+- [ ] Verify all `hola@cristinadoncel.com` contact references are correct and the mailbox is active on the new domain.
 
 ---
 
