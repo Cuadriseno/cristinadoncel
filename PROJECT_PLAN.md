@@ -366,14 +366,14 @@ proceeding. Check boxes are updated as we go.
 - [x] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK ✅ Done — installed `@radix-ui/react-navigation-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-accordion`, `@radix-ui/react-tooltip`, `framer-motion`, `zod`, `resend`, `@hcaptcha/react-hcaptcha`, `@mailerlite/mailerlite-nodejs`.
 - [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
 - [x] **0.6** Create `.env.local.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.local.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
-- [x] **0.7** Set up GitHub Actions CI workflow (lint + typecheck) ✅ Done — added `.github/workflows/ci.yml` (runs on push/PR to `main`, Node 20, `npm ci`, `npm run lint`, `npm run typecheck`). Added `typecheck` script (`tsc --noEmit`) to `package.json`. Both verified passing locally.
+- [x] **0.7** Set up GitHub Actions CI workflow (lint + typecheck) ✅ Done — added `.github/workflows/ci.yml` (runs on push/PR to `main`, Node 24, `npm ci`, `npm run lint`, `npm run typecheck`). Added `typecheck` script (`tsc --noEmit`) to `package.json`. Both verified passing locally. Updated from Node 20 → 24 after GitHub Actions deprecation warning.
 - [x] **0.8** Connect repo to Vercel, confirm first automatic deploy ✅ Done — repo connected via Vercel's GitHub integration, first deploy successful. Live preview: https://cristinadoncel.vercel.app/
-- [ ] **0.9 [DECISION]** Configure Tailwind with brand colors and fonts — *needs brand guide*
+- [x] **0.9** Configure Tailwind with brand colors and fonts ✅ Done — extracted palette and typography directly from live site CSS (Elementor global kit). Brand tokens added as CSS custom properties in `src/app/globals.css` `@theme` block (`--color-brand-primary: #786674`, `--color-brand-secondary: #352D33`, `--color-brand-soft: #D8C7D5`, etc.). Fonts wired up in `layout.tsx` via `next/font/google`: Noto Sans (body), Ms Madi (script accent), Marcellus (serif/buttons). Full reference in `docs/BRANDING.md`.
 
 ### Phase 1 — Content & Assets
-- [ ] **1.1** Add all images to `/public/images/` (logo, portfolio, about, clients)
-- [ ] **1.2** Create `/src/content/` data files (services, portfolio, clients)
-- [ ] **1.3** Add legal texts to `/src/content/legal/` as Markdown files
+- [x] **1.1** Add all images to `/public/images/` ✅ Done — working/low-res images placed in `portfolio/`, `clients/`, `brand/`. High-res finals and branding assets (SVG logo etc.) to be swapped in when available. See `docs/BRANDING.md` for open items.
+- [x] **1.2** Create `/src/content/` data files ✅ Done — created `clients.ts`, `portfolio.ts`, `services.ts` and `pages/home.ts`, `pages/marcas-y-agencias.ts`, `pages/bodas-y-eventos.ts`, `pages/branding.ts`, `pages/sobre-mi.ts` with full Spanish copy and image mappings. Branding/sobre-mi images are placeholders pending final assets.
+- [x] **1.3** Add legal texts to `/src/content/legal/` as Markdown files ✅ Done — created `aviso-legal.md`, `privacidad.md`, `cookies.md`, `terminos.md`, `devoluciones.md` with full content extracted from live site.
 - [ ] **1.4** Review legal texts for completeness
 
 ### Phase 2 — Layout & Shared Components
