@@ -2,25 +2,40 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #080708;
+
+  /* Brand palette — extracted from cristinadoncel.com (Elementor global kit) */
+  --brand-primary: #786674; /* muted mauve/plum — buttons, links, nav hover */
+  --brand-secondary: #352d33; /* dark plum — hover states */
+  --brand-text: #080708; /* near-black body text */
+  --brand-accent: #ffffff; /* white — used on dark backgrounds */
+  --brand-soft: #d8c7d5; /* soft lilac — subtle backgrounds/highlights */
+  --brand-base: #f0f0f0;
+  --brand-base-2: #f7f8f9;
+  --brand-base-3: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-text: var(--brand-text);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-base: var(--brand-base);
+  --color-brand-base-2: var(--brand-base-2);
+  --color-brand-base-3: var(--brand-base-3);
+
+  --font-sans: var(--font-noto-sans);
+  --font-script: var(--font-ms-madi);
+  --font-serif: var(--font-marcellus);
+  --font-mono: var(--font-geist-mono);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
