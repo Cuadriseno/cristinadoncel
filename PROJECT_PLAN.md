@@ -377,11 +377,11 @@ proceeding. Check boxes are updated as we go.
 - [x] **1.4** Review legal texts for completeness ✅ Done — all 5 files reviewed. Two items flagged for Cristina to resolve before go-live: (1) `privacidad.md` last-updated date is stale (2020) — needs updating to reflect new hosting/analytics; (2) `terminos.md` and `cookies.md` contain e-commerce/WooCommerce sections (shipping, Redsys/Bizum payments) that are not applicable to the new site — Cristina to decide whether to strip or retain before Phase 8.
 
 ### Phase 2 — Layout & Shared Components
-- [ ] **2.1** Build `Navbar` (responsive, dropdown nav, mobile hamburger menu)
-- [ ] **2.2** Build `Footer` (legal links, email, copyright, newsletter slot)
-- [ ] **2.3** Build `CookieBanner` (accept/reject, localStorage)
-- [ ] **2.4** Build `Button` and `Input` UI primitives
-- [ ] **2.5** Configure root `layout.tsx` (fonts, default metadata, nav, footer, banner)
+- [x] **2.1** Build `Navbar` ✅ Done — announcement bar (commented out for launch), logo, Radix UI dropdown for Servicios, mobile hamburger with Framer Motion slide-down menu.
+- [x] **2.2** Build `Footer` ✅ Done — logo, newsletter form (Spanish validation, noValidate), legal links, contact email, dynamic copyright year.
+- [x] **2.3** Build `CookieBanner` ✅ Done — accept/reject, localStorage, Framer Motion slide-up, SSR-safe (useEffect pattern), `getCookieConsent()` utility exported.
+- [x] **2.4** Build `Button` and `Input` UI primitives ✅ Done — `Button` (3 variants: outline/primary/ghost, 3 sizes, forwardRef), `Input` (label, error, hint, forwardRef).
+- [x] **2.5** Configure root `layout.tsx` ✅ Done — full OG/Twitter metadata, title template, metadataBase, keywords, robots, font-display swap, `<main>` semantic wrapper.
 
 ### Phase 3 — Homepage
 - [ ] **3.1** Build `Hero` section (headline, subheadline, CTA)
@@ -484,6 +484,7 @@ Items that must be resolved before cutting the domain over to the new site.
 ### Brand assets
 - [ ] Replace low-res placeholder images with final high-res versions (see `docs/BRANDING.md` open items).
 - [ ] Confirm final SVG/vector logo files are in `/public/images/brand/` before launch.
+- [ ] Create `/public/images/brand/og-image.jpg` (1200×630px) — used for Open Graph / social share previews (WhatsApp, LinkedIn, Twitter/X, etc.). Suggested: logo centred on `#D8C7D5` background, or a hero photo with logo overlay.
 
 ### Other
 - [ ] Update `privacidad.md` hosting/platform reference from WordPress/Don Dominio → Vercel.
