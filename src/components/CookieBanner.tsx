@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -8,18 +8,33 @@ const STORAGE_KEY = "cookie-consent";
 
 type ConsentValue = "accepted" | "rejected";
 
-export default function CookieBanner() {
-  // Always false on first render (server + client) to avoid a hydration mismatch;
-  // localStorage is only readable after mount.
-  const [visible, setVisible] = useState(false);
+const listeners = new Set<() => void>();
 
-  useEffect(() => {
-    setVisible(!localStorage.getItem(STORAGE_KEY));
-  }, []);
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  return () => listeners.delete(listener);
+}
+
+function notifyListeners() {
+  listeners.forEach((listener) => listener());
+}
+
+function getSnapshot() {
+  return localStorage.getItem(STORAGE_KEY);
+}
+
+// No consent decided yet during SSR/hydration — banner stays hidden until the client confirms.
+function getServerSnapshot() {
+  return "pending";
+}
+
+export default function CookieBanner() {
+  const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
+  const visible = consent === null;
 
   function handleConsent(value: ConsentValue) {
     localStorage.setItem(STORAGE_KEY, value);
-    setVisible(false);
+    notifyListeners();
     // Analytics and non-essential scripts load only after acceptance.
     // Fire a custom event so other components can react if needed.
     window.dispatchEvent(new CustomEvent("cookie-consent", { detail: value }));
