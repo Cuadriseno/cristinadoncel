@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -9,14 +9,10 @@ const STORAGE_KEY = "cookie-consent";
 type ConsentValue = "accepted" | "rejected";
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState(false);
-
-  // Must use useEffect so the server always renders nothing (visible=false),
-  // and only the client reads localStorage — prevents SSR hydration mismatch.
-  // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-  }, []);
+  const [visible, setVisible] = useState<boolean>(() => {
+    if (typeof window === "undefined") return false;
+    return !localStorage.getItem(STORAGE_KEY);
+  });
 
   function handleConsent(value: ConsentValue) {
     localStorage.setItem(STORAGE_KEY, value);
