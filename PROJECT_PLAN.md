@@ -384,14 +384,14 @@ proceeding. Check boxes are updated as we go.
 - [x] **2.5** Configure root `layout.tsx` ✅ Done — full OG/Twitter metadata, title template, metadataBase, keywords, robots, font-display swap, `<main>` semantic wrapper.
 
 ### Phase 3 — Homepage
-- [ ] **3.1** Build `Hero` section (headline, subheadline, CTA)
-- [ ] **3.2** Build `Services` section (3 service cards)
-- [ ] **3.3** Build `ClientLogos` section
-- [ ] **3.4** Build `HowIWork` section
-- [ ] **3.5** Build `NewsletterForm` component
-- [ ] **3.6** Build `ContactCTA` section
-- [ ] **3.7** Assemble `page.tsx` (homepage)
-- [ ] **3.8** Add Framer Motion animations (hero entrance, section scroll reveals)
+- [x] **3.1** Build `Hero` section (headline, subheadline, CTA)
+- [x] **3.2** Build `Services` section (3 service cards)
+- [x] **3.3** Build `ClientLogos` section
+- [x] **3.4** Build `HowIWork` section
+- [x] **3.5** Build `NewsletterForm` component
+- [x] **3.6** Build `ContactCTA` section
+- [x] **3.7** Assemble `page.tsx` (homepage)
+- [x] **3.8** Add Framer Motion animations (hero entrance, section scroll reveals)
 
 ### Phase 4 — Service & About Pages
 - [ ] **4.1** Build `/marcas-y-agencias` page

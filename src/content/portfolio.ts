@@ -8,7 +8,7 @@ export interface PortfolioImage {
  */
 export const howIWork = {
   frameLeft: {
-    src: "/images/portfolio/work_event_frame_1.png",
+    src: "/images/portfolio/work_wedding_1.png",
     alt: "Caligrafía en evento — Cristina Doncel",
   },
   logo: {
@@ -16,7 +16,7 @@ export const howIWork = {
     alt: "Cristina Doncel — caligrafía",
   },
   frameRight: {
-    src: "/images/portfolio/work_event_frame_2.png",
+    src: "/images/portfolio/work_wedding_2.png",
     alt: "Arte en directo en evento — Cristina Doncel",
   },
 };
@@ -25,7 +25,7 @@ export const howIWork = {
  * Homepage — hero section
  */
 export const hero = {
-  src: "/images/portfolio/hero_caligrafia.jpg",
+  src: "/images/portfolio/hero_caligrafia.png",
   alt: "Caligrafía hecha a mano — Cristina Doncel",
 };
 

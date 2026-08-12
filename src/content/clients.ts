@@ -12,39 +12,39 @@ export interface Client {
  */
 export const clients: Client[] = [
   {
-    name: "Cliente 1",
-    logo: "/images/clients/Frame-57.png",
-    alt: "Logo cliente 1",
+    name: "Hermès",
+    logo: "/images/clients/hermes_logo.png",
+    alt: "Logo de Hermès",
   },
   {
-    name: "Cliente 2",
-    logo: "/images/clients/Frame-58.png",
-    alt: "Logo cliente 2",
+    name: "Hoff",
+    logo: "/images/clients/hoff_logo.png",
+    alt: "Logo de Hoff",
   },
   {
-    name: "Cliente 3",
-    logo: "/images/clients/Frame-59.png",
-    alt: "Logo cliente 3",
+    name: "Jo Malone",
+    logo: "/images/clients/jo_malone_logo.png",
+    alt: "Logo de Jo Malone",
   },
   {
-    name: "Cliente 4",
-    logo: "/images/clients/Frame-60.png",
-    alt: "Logo cliente 4",
+    name: "Rituals",
+    logo: "/images/clients/rituals_logo.png",
+    alt: "Logo de Rituals",
   },
   {
-    name: "Cliente 5",
-    logo: "/images/clients/Frame-61.png",
-    alt: "Logo cliente 5",
+    name: "Sephora",
+    logo: "/images/clients/sephora_logo.png",
+    alt: "Logo de Sephora",
   },
   {
-    name: "Cliente 6",
-    logo: "/images/clients/Frame-62.png",
-    alt: "Logo cliente 6",
+    name: "Swarovski",
+    logo: "/images/clients/swarovski_logo.png",
+    alt: "Logo de Swarovski",
   },
   {
-    name: "Cliente 7",
-    logo: "/images/clients/Frame-63.png",
-    alt: "Logo cliente 7",
+    name: "Tom Ford",
+    logo: "/images/clients/tom_ford_logo.png",
+    alt: "Logo de Tom Ford",
   },
 ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -9,10 +9,13 @@ const STORAGE_KEY = "cookie-consent";
 type ConsentValue = "accepted" | "rejected";
 
 export default function CookieBanner() {
-  const [visible, setVisible] = useState<boolean>(() => {
-    if (typeof window === "undefined") return false;
-    return !localStorage.getItem(STORAGE_KEY);
-  });
+  // Always false on first render (server + client) to avoid a hydration mismatch;
+  // localStorage is only readable after mount.
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(!localStorage.getItem(STORAGE_KEY));
+  }, []);
 
   function handleConsent(value: ConsentValue) {
     localStorage.setItem(STORAGE_KEY, value);
