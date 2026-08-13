@@ -394,10 +394,10 @@ proceeding. Check boxes are updated as we go.
 - [x] **3.8** Add Framer Motion animations (hero entrance, section scroll reveals)
 
 ### Phase 4 — Service & About Pages
-- [ ] **4.1** Build `/marcas-y-agencias` page
-- [ ] **4.2** Build `/bodas-y-eventos` page
-- [ ] **4.3** Build `/branding` page
-- [ ] **4.4** Build `/sobre-mi` page
+- [x] **4.1** Build `/marcas-y-agencias` page ✅ Done — implemented hero, intro, services cards, clients block, and CTA using `src/content/pages/marcas-y-agencias.ts` + shared clients content.
+- [x] **4.2** Build `/bodas-y-eventos` page ✅ Done — implemented hero with image, intro, services cards, and CTA using `src/content/pages/bodas-y-eventos.ts`.
+- [x] **4.3** Build `/branding` page ✅ Done — implemented full structure (hero, intro, portfolio placeholder, reasons, process, packages, FAQ, CTA) from `src/content/pages/branding.ts`.
+- [x] **4.4** Build `/sobre-mi` page ✅ Done — implemented hero placeholder image, biography paragraphs, values section, and CTA from `src/content/pages/sobre-mi.ts`.
 
 ### Phase 5 — Legal Pages
 - [ ] **5.1** Build Markdown renderer component for legal content
