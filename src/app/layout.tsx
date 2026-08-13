@@ -31,7 +31,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://cristinadoncel.com";
+const siteUrl = "https://cristinadoncel.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

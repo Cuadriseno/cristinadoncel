@@ -487,6 +487,7 @@ Items that must be resolved before cutting the domain over to the new site.
 - [ ] Create `/public/images/brand/og-image.jpg` (1200×630px) — used for Open Graph / social share previews (WhatsApp, LinkedIn, Twitter/X, etc.). Suggested: logo centred on `#D8C7D5` background, or a hero photo with logo overlay.
 
 ### Other
+- [ ] When switching from `cristinadoncel.vercel.app` to `cristinadoncel.com`, update `siteUrl` in `src/app/layout.tsx`, deploy, and verify that the absolute `og:image`, `twitter:image`, canonical URL, and favicon URLs load successfully on the `.com` domain. Re-scrape the site in each relevant social sharing debugger because previews may be cached.
 - [ ] Update `privacidad.md` hosting/platform reference from WordPress/Don Dominio → Vercel.
 - [ ] Verify all `hola@cristinadoncel.com` contact references are correct and the mailbox is active on the new domain.
 
