@@ -400,8 +400,8 @@ proceeding. Check boxes are updated as we go.
 - [x] **4.4** Build `/sobre-mi` page ✅ Done — implemented hero placeholder image, biography paragraphs, values section, and CTA from `src/content/pages/sobre-mi.ts`.
 
 ### Phase 5 — Legal Pages
-- [ ] **5.1** Build Markdown renderer component for legal content
-- [ ] **5.2** Build all 5 legal pages using content files
+- [x] **5.1** Build Markdown renderer component for legal content
+- [x] **5.2** Build all 5 legal pages using content files
 
 ### Phase 6 — API Routes & Integrations
 - [ ] **6.1** Register on Resend, verify domain, obtain API key
