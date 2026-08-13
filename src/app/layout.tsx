@@ -54,6 +54,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Cristina Doncel", url: siteUrl }],
   creator: "Cristina Doncel",
+  icons: {
+    icon: "/images/brand/CD_initials_logo_black_letters_transparent_background.png",
+  },
   openGraph: {
     type: "website",
     locale: "es_ES",
@@ -64,7 +67,7 @@ export const metadata: Metadata = {
       "Caligrafía hecha a mano para crear experiencias con alma y marcas con identidad.",
     images: [
       {
-        url: "/images/brand/og-image.jpg",
+        url: "/images/portfolio/work_jo_malone.png",
         width: 1200,
         height: 630,
         alt: "Cristina Doncel — Caligrafía hecha a mano",
@@ -76,7 +79,7 @@ export const metadata: Metadata = {
     title: "Cristina Doncel — Caligrafía hecha a mano",
     description:
       "Caligrafía hecha a mano para crear experiencias con alma y marcas con identidad.",
-    images: ["/images/brand/og-image.jpg"],
+    images: ["/images/portfolio/work_jo_malone.png"],
   },
   robots: {
     index: true,
