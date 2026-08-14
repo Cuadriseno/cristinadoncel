@@ -404,8 +404,8 @@ proceeding. Check boxes are updated as we go.
 - [x] **5.2** Build all 5 legal pages using content files
 
 ### Phase 6 — API Routes & Integrations
-- [ ] **6.1** Register on Resend, verify domain, obtain API key
-- [ ] **6.2** Register on hCaptcha, obtain site key + secret
+- [ ] **6.1** Register on Resend, verify `cristinadoncel.com` via DNS, obtain API key — pending domain verification. Resend does not accept the free `cristinadoncel.vercel.app` domain; add Resend's DNS records in dondominio first. This can be done before connecting the domain to Vercel.
+- [x] **6.2** Register on hCaptcha, obtain site key + secret, configure the local hostname and add both variables to Vercel ✅ Done — local development works at `local.cristinadoncel.com`; the Vercel environment variables are configured. The secret was rotated before use.
 - [ ] **6.3** Retrieve MailerLite API key and subscriber group ID
 - [ ] **6.4** Build `/api/subscribe` route (Zod + hCaptcha + MailerLite API)
 - [ ] **6.5** Build `ContactForm` component (hidden/feature-flagged at launch)
