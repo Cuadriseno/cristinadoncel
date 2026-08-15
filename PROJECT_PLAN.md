@@ -38,7 +38,7 @@ The repository is public. The following rules are enforced throughout the projec
 | What | Where it lives | Committed to git? |
 |---|---|---|
 | Real API keys, secrets | `.env.local` (local) + Vercel env vars (production) | ❌ Never |
-| Variable names (no values) | `.env.local.example` | ✅ Yes |
+| Variable names (no values) | `.env.example` | ✅ Yes |
 | GitHub Actions secrets | GitHub repository Settings → Secrets | ❌ Never |
 | Images, fonts, static assets | `/public` folder | ✅ Yes (safe) |
 | Content / text | `/src/content` TypeScript files | ✅ Yes (safe) |
@@ -299,7 +299,7 @@ cristinadoncel/
 │   │   └── validations.ts            # Zod schemas (contact + subscribe)
 │   └── styles/
 │       └── globals.css               # Tailwind base + CSS custom properties
-├── .env.local.example                # Variable names, no values — committed to git
+├── .env.example                       # Variable names, no values — committed to git
 ├── .eslintrc.json
 ├── .prettierrc
 ├── next.config.ts
@@ -365,7 +365,7 @@ proceeding. Check boxes are updated as we go.
 - [x] **0.3** Install and configure Tailwind CSS ✅ Done — installed automatically as **Tailwind v4** (not v3 as originally planned) via `create-next-app`. Config model changed: no `tailwind.config.ts`; brand tokens will be added as CSS variables inside the `@theme { ... }` block in `src/app/globals.css` (see Step 0.9).
 - [x] **0.4** Install dependencies: Radix UI, Framer Motion, Zod, Resend, hCaptcha, MailerLite SDK ✅ Done — installed `@radix-ui/react-navigation-menu`, `@radix-ui/react-dialog`, `@radix-ui/react-accordion`, `@radix-ui/react-tooltip`, `framer-motion`, `zod`, `resend`, `@hcaptcha/react-hcaptcha`, `@mailerlite/mailerlite-nodejs`.
 - [x] **0.5** Configure ESLint + Prettier ✅ Done — ESLint flat config (`eslint.config.mjs`) already scaffolded with `eslint-config-next` (core-web-vitals + TypeScript); added `prettier` + `eslint-config-prettier` to disable conflicting stylistic rules. Created `.prettierrc` and `.prettierignore`. Added `npm run format` / `npm run format:check` scripts. `npm run lint` passes clean.
-- [x] **0.6** Create `.env.local.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.local.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
+- [x] **0.6** Create `.env.example` ✅ Done — created with all planned variable names (Resend, hCaptcha, MailerLite, contact destination). Also fixed `.gitignore` (`.env*` was blanket-ignoring it — added `!.env.example` exception) and untracked the `.vs/` folder (Visual Studio local cache/index files were accidentally committed).
 - [x] **0.7** Set up GitHub Actions CI workflow (lint + typecheck) ✅ Done — added `.github/workflows/ci.yml` (runs on push/PR to `main`, Node 24, `npm ci`, `npm run lint`, `npm run typecheck`). Added `typecheck` script (`tsc --noEmit`) to `package.json`. Both verified passing locally. Updated from Node 20 → 24 after GitHub Actions deprecation warning.
 - [x] **0.8** Connect repo to Vercel, confirm first automatic deploy ✅ Done — repo connected via Vercel's GitHub integration, first deploy successful. Live preview: https://cristinadoncel.vercel.app/
 - [x] **0.9** Configure Tailwind with brand colors and fonts ✅ Done — extracted palette and typography directly from live site CSS (Elementor global kit). Brand tokens added as CSS custom properties in `src/app/globals.css` `@theme` block (`--color-brand-primary: #786674`, `--color-brand-secondary: #352D33`, `--color-brand-soft: #D8C7D5`, etc.). Fonts wired up in `layout.tsx` via `next/font/google`: Noto Sans (body), Ms Madi (script accent), Marcellus (serif/buttons). Full reference in `docs/BRANDING.md`.
@@ -408,8 +408,8 @@ proceeding. Check boxes are updated as we go.
 - [x] **6.2** Register on hCaptcha, obtain site key + secret, configure the local hostname and add both variables to Vercel ✅ Done — local development works at `local.cristinadoncel.com`; the Vercel environment variables are configured. The secret was rotated before use.
 - [x] **6.3** Retrieve MailerLite API key and subscriber group ID ✅ Done — created a temporary `TestingGroup` for development and configured the key and group ID locally and in Vercel.
 - [x] **6.4** Build `/api/subscribe` route (Zod + hCaptcha + MailerLite API) ✅ Done — validates the email with Zod, verifies hCaptcha server-side, and creates or updates the subscriber in the configured MailerLite group.
-- [ ] **6.5** Build `ContactForm` component (hidden/feature-flagged at launch)
-- [ ] **6.6** Build `/api/contact` route (Zod + hCaptcha + Resend)
+- [x] **6.5** Build `ContactForm` component (hidden/feature-flagged at launch) ✅ Done — added an accessible name, email, message, and hCaptcha form. It remains unmounted and disabled by default with `NEXT_PUBLIC_ENABLE_CONTACT_FORM=false` and posts to `/api/contact` when enabled. Decide later whether to expose it alongside the newsletter or replace the newsletter with it.
+- [x] **6.6** Build `/api/contact` route (Zod + hCaptcha + Resend) ✅ Done — validates the contact fields with Zod, verifies hCaptcha server-side, and sends the message through Resend without exposing credentials.
 - [ ] **6.7** Test both routes end-to-end in development — newsletter subscription tested successfully: MailerLite returned `200` and the test address appeared in `TestingGroup`.
 - [ ] **6.8** Add all environment variables to Vercel project settings
 
@@ -422,6 +422,9 @@ proceeding. Check boxes are updated as we go.
 
 ### Phase 8 — Go-Live
 - [ ] **8.1** Final cross-browser and mobile review
+- [ ] **8.1a** Accessibility and visual QA review — compare the new site with the previous website across desktop and mobile, checking typography, spacing, colors, hover/focus states, component styling, page structure, and overall visual consistency.
+- [ ] **8.1b** Accessibility audit before launch — verify keyboard navigation, visible focus indicators, heading hierarchy, labels and error messages, alt text, color contrast, responsive layout, reduced-motion behavior, touch target sizes, and absence of horizontal overflow.
+- [ ] **8.1c** Image and asset comparison — review every page against the previous website, confirm the correct images and crops are used, check image quality and loading behavior, and replace any remaining placeholders before launch.
 - [ ] **8.2** Add `cristinadoncel.com` custom domain in Vercel settings
 - [ ] **8.3** Update DNS records in dondominio.com (A record / CNAME from Vercel)
 - [ ] **8.4** Confirm Vercel SSL certificate issued

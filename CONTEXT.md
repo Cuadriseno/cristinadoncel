@@ -42,7 +42,7 @@ Deployed on Vercel. Repo on GitHub (private).
 ## Current status
 - GitHub repo created (private)
 - PROJECT_PLAN.md committed to repo root
-- Phase 0 steps 0.1–0.8 complete: Next.js 16 + TypeScript + Tailwind v4 scaffolded, dependencies installed, ESLint+Prettier configured, .env.local.example added, GitHub Actions CI passing, Vercel deploy live
+- Phase 0 steps 0.1–0.8 complete: Next.js 16 + TypeScript + Tailwind v4 scaffolded, dependencies installed, ESLint+Prettier configured, .env.example added, GitHub Actions CI passing, Vercel deploy live
 - Next step: Phase 0, Step 0.9 — Tailwind brand colors/fonts (needs brand guide from client)
 
 ## How to resume with Copilot
