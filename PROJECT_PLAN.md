@@ -406,11 +406,11 @@ proceeding. Check boxes are updated as we go.
 ### Phase 6 — API Routes & Integrations
 - [ ] **6.1** Register on Resend, verify `cristinadoncel.com` via DNS, obtain API key — pending domain verification. Resend does not accept the free `cristinadoncel.vercel.app` domain; add Resend's DNS records in dondominio first. This can be done before connecting the domain to Vercel.
 - [x] **6.2** Register on hCaptcha, obtain site key + secret, configure the local hostname and add both variables to Vercel ✅ Done — local development works at `local.cristinadoncel.com`; the Vercel environment variables are configured. The secret was rotated before use.
-- [ ] **6.3** Retrieve MailerLite API key and subscriber group ID
-- [ ] **6.4** Build `/api/subscribe` route (Zod + hCaptcha + MailerLite API)
+- [x] **6.3** Retrieve MailerLite API key and subscriber group ID ✅ Done — created a temporary `TestingGroup` for development and configured the key and group ID locally and in Vercel.
+- [x] **6.4** Build `/api/subscribe` route (Zod + hCaptcha + MailerLite API) ✅ Done — validates the email with Zod, verifies hCaptcha server-side, and creates or updates the subscriber in the configured MailerLite group.
 - [ ] **6.5** Build `ContactForm` component (hidden/feature-flagged at launch)
 - [ ] **6.6** Build `/api/contact` route (Zod + hCaptcha + Resend)
-- [ ] **6.7** Test both routes end-to-end in development
+- [ ] **6.7** Test both routes end-to-end in development — newsletter subscription tested successfully: MailerLite returned `200` and the test address appeared in `TestingGroup`.
 - [ ] **6.8** Add all environment variables to Vercel project settings
 
 ### Phase 7 — SEO & Performance
