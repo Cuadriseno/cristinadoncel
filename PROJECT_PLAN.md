@@ -493,6 +493,7 @@ Items that must be resolved before cutting the domain over to the new site.
 - [ ] When switching from `cristinadoncel.vercel.app` to `cristinadoncel.com`, update `siteUrl` in `src/app/layout.tsx`, deploy, and verify that the absolute `og:image`, `twitter:image`, canonical URL, and favicon URLs load successfully on the `.com` domain. Re-scrape the site in each relevant social sharing debugger because previews may be cached.
 - [ ] Update `privacidad.md` hosting/platform reference from WordPress/Don Dominio → Vercel.
 - [ ] Verify all `hola@cristinadoncel.com` contact references are correct and the mailbox is active on the new domain.
+- [ ] Verify all metadata/SEO and introduce new concepts/refine already existing.
 
 ---
 
