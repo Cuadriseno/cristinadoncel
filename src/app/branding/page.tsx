@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/sections/Reveal";
 import { brandingPage } from "@/content/pages/branding";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: brandingPage.meta.title,
-  description: brandingPage.meta.description,
-};
+export const metadata = createPageMetadata(brandingPage.meta.title, brandingPage.meta.description, "/branding");
 
 export default function BrandingPage() {
   return (

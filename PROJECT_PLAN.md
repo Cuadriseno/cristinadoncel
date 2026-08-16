@@ -414,9 +414,9 @@ proceeding. Check boxes are updated as we go.
 - [ ] **6.8** Add all environment variables to Vercel project settings
 
 ### Phase 7 — SEO & Performance
-- [ ] **7.1** Add `metadata` export to every page (title, description, OG, Twitter)
-- [ ] **7.2** Build `JsonLd` component and add Person + LocalBusiness structured data
-- [ ] **7.3** Generate `sitemap.ts` and `robots.ts`
+- [x] **7.1** Add `metadata` export to every page (title, description, OG, Twitter)
+- [x] **7.2** Build `JsonLd` component and add Person + LocalBusiness structured data
+- [x] **7.3** Generate `sitemap.ts` and `robots.ts`
 - [ ] **7.4** Audit all images (alt text, `next/image`, correct sizing)
 - [ ] **7.5** Run Lighthouse — fix any category below 90
 

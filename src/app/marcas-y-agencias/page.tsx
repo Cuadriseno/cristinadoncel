@@ -1,14 +1,11 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/sections/Reveal";
 import { marcasPage } from "@/content/pages/marcas-y-agencias";
 import { clients, clientsBanner } from "@/content/clients";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: marcasPage.meta.title,
-  description: marcasPage.meta.description,
-};
+export const metadata = createPageMetadata(marcasPage.meta.title, marcasPage.meta.description, "/marcas-y-agencias");
 
 export default function MarcasYAgenciasPage() {
   return (

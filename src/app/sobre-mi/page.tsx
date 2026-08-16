@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/sections/Reveal";
 import { sobreMiPage } from "@/content/pages/sobre-mi";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: sobreMiPage.meta.title,
-  description: sobreMiPage.meta.description,
-};
+export const metadata = createPageMetadata(sobreMiPage.meta.title, sobreMiPage.meta.description, "/sobre-mi");
 
 export default function SobreMiPage() {
   return (

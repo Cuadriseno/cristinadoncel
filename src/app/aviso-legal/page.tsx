@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
 import LegalPage from "@/components/legal/LegalPage";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Aviso legal",
-  description: "Aviso legal del sitio web de Cristina Doncel.",
-};
+export const metadata = createPageMetadata("Aviso legal", "Aviso legal del sitio web de Cristina Doncel.", "/aviso-legal");
 
 export default function AvisoLegalPage() {
   return <LegalPage fileName="aviso-legal.md" />;

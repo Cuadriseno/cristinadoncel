@@ -3,6 +3,7 @@ import { Noto_Sans, Ms_Madi, Marcellus, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/CookieBanner";
+import JsonLd from "@/components/JsonLd";
 import "./globals.css";
 
 const notoSans = Noto_Sans({
@@ -100,6 +101,7 @@ export default function RootLayout({
       className={`${notoSans.variable} ${msMadi.variable} ${marcellus.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <JsonLd />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

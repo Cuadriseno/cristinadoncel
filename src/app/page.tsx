@@ -5,6 +5,9 @@ import HowIWork from "@/components/sections/HowIWork";
 import ContactCTA from "@/components/sections/ContactCTA";
 import Reveal from "@/components/sections/Reveal";
 import { homePage } from "@/content/pages/home";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata(homePage.meta.title, homePage.meta.description);
 
 export default function Home() {
   return (

@@ -1,13 +1,10 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/sections/Reveal";
 import { bodasPage } from "@/content/pages/bodas-y-eventos";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: bodasPage.meta.title,
-  description: bodasPage.meta.description,
-};
+export const metadata = createPageMetadata(bodasPage.meta.title, bodasPage.meta.description, "/bodas-y-eventos");
 
 export default function BodasYEventosPage() {
   return (
