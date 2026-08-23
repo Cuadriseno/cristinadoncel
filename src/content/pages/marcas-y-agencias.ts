@@ -33,7 +33,7 @@ export const marcasPage = {
       description:
         "Caligrafía en directo para eventos, pop-ups y activaciones de marca. Personalización sobre diferentes soportes como papel, cartón, cuero, tela, cristal, vidrio, grabado o foil, adaptando cada trazo a la identidad de la marca. Ideal para crear experiencias únicas, contenido memorable y conexión real con el público.",
       image: {
-        src: "/images/portfolio/work_invitation.png",
+        src: "/images/portfolio/work_hoff_2.png",
         alt: "Activación de marca — caligrafía en directo",
       },
     },
@@ -42,7 +42,7 @@ export const marcasPage = {
       description:
         "Acuarelas e ilustraciones realizadas en directo durante eventos de marca. Desde ilustración rápida hasta figurines personalizados de invitados, una experiencia artística muy visual y altamente compartible. Perfecto para acciones exclusivas y eventos premium.",
       image: {
-        src: "/images/portfolio/work_hoff_2.png",
+        src: "/images/portfolio/work_wedding_3.png",
         alt: "Ilustración en vivo para evento de marca",
       },
     },

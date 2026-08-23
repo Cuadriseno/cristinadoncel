@@ -8,16 +8,16 @@ export interface PortfolioImage {
  */
 export const howIWork = {
   frameLeft: {
-    src: "/images/portfolio/work_wedding_1.png",
-    alt: "Caligrafía en evento — Cristina Doncel",
+    src: "/images/portfolio/how_i_work_01.png",
+    alt: "Cómo trabaja Cristina Doncel — izquierda",
   },
   logo: {
     src: "/images/brand/logo_full_name_black_letters_transparent_background.png",
     alt: "Cristina Doncel — caligrafía",
   },
   frameRight: {
-    src: "/images/portfolio/work_wedding_2.png",
-    alt: "Arte en directo en evento — Cristina Doncel",
+    src: "/images/portfolio/how_i_work_02.png",
+    alt: "Cómo trabaja Cristina Doncel — derecha",
   },
 };
 

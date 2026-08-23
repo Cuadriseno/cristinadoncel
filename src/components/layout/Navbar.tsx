@@ -29,16 +29,16 @@ export default function Navbar() {
 
       {/* Main nav */}
       <div className="border-b border-[#e8e2e6]">
-        <div className="max-w-[1200px] mx-auto px-5 flex items-center justify-between h-16">
+        <div className="max-w-[1200px] mx-auto px-5 flex items-center justify-between h-24">
 
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/images/brand/logo_with_initials_black_letters_transparent_background.png"
+              src="/images/brand/logo_full_name_black_letters_transparent_background.png"
               alt="Cristina Doncel"
-              width={120}
-              height={48}
-              className="h-10 w-auto object-contain"
+              width={160}
+              height={80}
+              className="h-16 w-auto object-contain"
               priority
             />
           </Link>
