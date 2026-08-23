@@ -142,3 +142,4 @@ https://docs.google.com/presentation/d/1mRSdQzSHu7F5Cma9_x6y1yuUHFTR1C_oBPDkTgnD
 
 ## Vídeo
 
+https://www.loom.com/share/c26579cb207a42a596731f58882d9f4d
